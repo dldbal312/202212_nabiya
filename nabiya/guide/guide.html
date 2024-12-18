@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+    <title>천사야</title>
+    <link rel="stylesheet" href="../css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <script src="../js/plugin/jquery-3.4.1.min.js"></script>
+    <script src="../js/plugin/swiper.min.js"></script>
+    <script src="../js/commonUI.js"></script>
+    <script src="../js/sub.js"></script>
+</head>
+	<script>
+
+		$(document).ready(function(){
+			$('.g_top_menu li').each(function(index){
+				console.log(index)
+				var tit = $(this).text()
+				$('.g_tit_deps1').eq(index).text(tit);
+			})
+		})
+	</script>
+	<style type="text/css">
+		.g_body{background:#ddd;}
+		.g_wrap{margin:45px auto 0;}
+		.g_menu{position:fixed;left:0;top:0;width:100%;background:#F51B4E;text-align:center;z-index:2}
+		.g_top_menu > li{display:inline-block;}
+		.g_top_menu > li > a{min-width:30px;display:block;padding:8px 10px;background:#ff6c8e;margin:0 -1px;color:#fff;}
+		.g_top_menu > li.mlist > a{min-width:62px;background:#b31339;}
+		.g_section{padding-top:10px;}
+		.g_wbox{background:#fff;box-shadow:1px 3px 10px rgba(0,0,0,0.2);padding:0 15px 20px;}
+		.g_tit_deps1{display:inline-block;position:relative;padding:8px 15px;background:#fff;font-size:19px;color:#0440b3;line-height:1.1;}
+		.g_tit_deps2{padding:25px 0 6px;margin-bottom:15px;border-bottom:3px solid #ddd;font-size:15px;color:#000;}
+		.g_tit_deps3{display:table; margin:18px 0 10px;font-size:13px;color:#6a7b9e;background:#e8e8e8;padding:1px 5px;letter-spacing:0;}
+		.g_tit_deps3:before{content:'＊ ';}
+		hr{border:none;border-bottom:1px dotted #ddd;}
+		.tab_win{position:relative;top:0;left:0;}
+		.tab_win:before{position:absolute;top:0;}
+	</style>
+</head>
+
+<body class="g_body">
+	<div class="g_menu">
+		<ul class="g_top_menu">
+			<li class="mlist"><a href="menulist.html">메뉴리스트</a></li>
+			<li><a href="#guide1">버튼/태그</a></li>
+			<li><a href="#guide2">폼</a></li>
+			<li><a href="#guide3">테이블</a></li>
+			<li><a href="#guide4">페이징/탭/토글</a></li>
+			<li><a href="#guide6">갤러리</a></li>
+			<li><a href="#guide7">리스트</a></li>
+			<li><a href="#guide5">컨텐츠 영역</a></li>
+		</ul>
+	</div>
+	<div class="g_wrap">
+		<div class="g_section">
+			<h1 class="g_tit_deps1" id="guide1"></h1>
+			<div class="g_wbox">
+				<h2 class="g_tit_deps2">A 태그</h2>
+
+				<!-- <h3 class="g_tit_deps3">기본스타일</h3> -->
+				<a href="#" class="btncom sty1 sizeS">버튼1</a>
+				<a href="#" class="btncom sty2 sizeS">버튼2</a>
+
+				<!-- <h3 class="g_tit_deps3">disabled처리(클래스사용)</h3>
+				<a href="#" class="btncom sty1 sizeS disabled">버튼1</a> -->
+
+				<h2 class="g_tit_deps2">BUTTON 태그</h2>
+
+				<!-- <h3 class="g_tit_deps3">기본스타일</h3> -->
+				<button type="button" class="btncom sty1 sizeS">버튼1</button>
+
+<!-- 				<h3 class="g_tit_deps3">disabled처리(속성사용)</h3>
+				<button type="button" class="btncom sty1 sizeS" disabled="disabled">버튼1</button>
+ -->
+				<h2 class="g_tit_deps2">버튼 사이즈</h2>
+				<a href="#" class="btncom sty1 sizeS">사이즈S</a>
+				<a href="#" class="btncom sty1 sizeM">사이즈SM</a>
+				<a href="#" class="btncom sty1 sizeL">사이즈M</a>
+
+				<h2 class="g_tit_deps2">아래 기능버튼인경우(.btnarea.center > .btncom) (left / center / right)</h2>
+				<p></p>
+				<div class="btnarea">
+				    <a href="#" class="btncom sty1 sizeS">리뷰쓰기</a>
+				</div>
+
+				<h2 class="g_tit_deps2">아이콘 버튼형 (텍스트있는경우 .blind 삭제)</h2>
+				<div style="background:#e8e8e8">
+				<i class="comico arr_next_lgwh"><img src="../img/common/icon_arr_prev_lgwh.png" alt="다음"></i>
+				<i class="comico arr_prev_lgwh"><img src="../img/common/icon_arr_prev_lgwh.png" alt="이전"></i>
+				</div>
+				<i class="comico search"><img src="../img/common/icon_search.png" alt="검색"></i>
+				<i class="comico arr_r_smgr"><img src="../img/common/icon_arr_r_smgr.png" alt="이동"></i>
+				<i class="comico rateylS">평점</i>
+				<i class="comico arr_prev_mdgr"><img src="../img/common/icon_arr_prev_mdgr.png" alt="이전" class=""></i>
+				<i class="comico arr_next_mdgr"><img src="../img/common/icon_arr_prev_mdgr.png" alt="다음" class=""></i>
+				<i class="comico lctMwh"><img src="../img/common/icon_lctMwh.png" alt="위치"></i>
+				<i class="comico arr_next_mdgr"><img src="../img/common/icon_arr_prev_mdgr.png" alt="다음" class=""></i>
+				<i class="comico lctSgr"><img src="../img/common/icon_lctSgr.png" alt="위치"></i>
+
+				<span class="comico rategrSfiv">
+					<i class="comico rateylSfiv" style="width:90%">평점</i><!-- 10단위로 %) -->
+				</span>
+
+				<i class="comico arr_up_mdgr"><img src="../img/common/icon_arr_up_mdgr.png" alt="열기"></i>
+				<i class="comico arr_up_mdgr on"><img src="../img/common/icon_arr_up_mdgr.png" alt="열기"></i>
+				<i class="comico arr_prev_smgr"><img src="../img/common/icon_arr_prev_smgr.png" alt="이전"></i></a>
+				<i class="comico arr_next_smgr"><img src="../img/common/icon_arr_prev_smgr.png" alt="다음"></i></a>
+
+				<i class="comico lctLgr"><img src="../img/common/icon_lctLgr.png" alt="위치"></i>
+				<i class="comico arr_up_mdgr2"><img src="../img/common/icon_arr_up_mdgr2.png" alt="열기"></i>
+				<i class="comico arr_up_mdgr2 on"><img src="../img/common/icon_arr_up_mdgr2.png" alt="열기"></i>
+				
+				<h2 class="g_tit_deps2">버튼 안 아이콘형태</h2>
+				<a href="#" class="btncom sty1 sizeS">
+					<i class="comico search"><img src="../img/common/icon_search.png" alt="검색"></i>
+					<span class="txt">리뷰쓰기</span>
+				</a>
+				
+				<h2 class="g_tit_deps2">태그</h2>
+				<div class="tag_area">
+                    <span class="tags tag1">추천업체</span>
+                    <span class="tags tag2">추천업체</span>
+                    <span class="tags tag3">추천업체</span>
+                </div>
+
+			</div>
+		</div><!--//g_section -->
+
+		<div class="g_section">
+			<h1 class="g_tit_deps1" id="guide2"></h1>
+			<div class="g_wbox">
+				<h2 class="g_tit_deps2">체크박스</h2>
+				<h3 class="g_tit_deps3">기본스타일</h3>
+				
+				<h3 class="g_tit_deps3">텍스트형태 (.chk_area)</h3>
+				
+				<h3 class="g_tit_deps3">고정간격 (.fld > .chk_area)</h3>
+
+				<h2 class="g_tit_deps2">폼박스 스타일</h2>
+				<h3 class="g_tit_deps3">인풋 오른쪽 버튼형</h3>
+			</div>
+		</div><!--//g_section -->
+
+		<div class="g_section">
+			<h1 class="g_tit_deps1" id="guide3"></h1>
+			<div class="g_wbox">
+				<h2 class="g_tit_deps2">Board 스타일</h2>
+				<!-- table_list -->
+				<div class="tbl_cols">
+				    <table class="tbl">
+				        <caption>리뷰</caption>
+				        <colgroup>
+				            <col class="colw1 m_no">
+				            <col class="colw2">
+				            <col class="colw3 m_no">
+				            <col class="colw4">
+				        </colgroup>
+				        <thead>
+				            <tr>
+				                <th scope="col" class="tit m_no">번호</th>
+				                <th scope="col" class="tit">내용</th>
+				                <th scope="col" class="tit m_no">작성자</th>
+				                <th scope="col" class="tit">작성일</th>
+				            </tr>
+				        </thead>
+				        <tbody>
+				            <tr>
+				                <td class="desc m_no">1000</td>
+				                <td class="desc subject"><a href="#">마사지 잘 받고 돌아갑니다 너무 시원하네요</a></td>
+				                <td class="desc m_no">닉네임</td>
+				                <td class="desc">2022 .09.01</td>
+				            </tr>
+				            <tr>
+				                <td class="desc m_no">1000</td>
+				                <td class="desc subject"><a href="#">마사지 잘 받고 돌아갑니다 너무 시원하네요</a></td>
+				                <td class="desc m_no">닉네임</td>
+				                <td class="desc">2022 .09.01</td>
+				            </tr>
+				            <tr>
+				                <td class="desc m_no">1000</td>
+				                <td class="desc subject"><a href="#">마사지 잘 받고 돌아갑니다 너무 시원하네요</a></td>
+				                <td class="desc m_no">닉네임</td>
+				                <td class="desc">2022 .09.01</td>
+				            </tr>
+				            <tr>
+				                <td class="desc m_no">1000</td>
+				                <td class="desc subject"><a href="#">마사지 잘 받고 돌아갑니다 너무 시원하네요</a></td>
+				                <td class="desc m_no">닉네임</td>
+				                <td class="desc">2022 .09.01</td>
+				            </tr>
+				        </tbody>
+				    </table>
+				</div>
+				<!-- //table_list -->
+
+				<h2 class="g_tit_deps2"></h2>
+
+				<h2 class="g_tit_deps2">Form 스타일</h2>
+			</div>
+		</div><!--//g_section -->
+
+		<div class="g_section">
+			<h1 class="g_tit_deps1" id="guide4"></h1>
+			<div class="g_wbox">
+				<h2 class="g_tit_deps2">탭 스타일</h2>
+				<div class="tab_box">
+                    <ul class="tab_link">
+                        <li class="itm on"><a href="#" class="itmlink">탭 (1)</a></li>
+                        <li class="itm"><a href="#" class="itmlink">탭 (2)</a></li>
+                    </ul>
+                    <div class="tab_wrap">
+                        <div class="tab_target">탭 (1)</div>
+                        <div class="tab_target">탭 (2)</div>
+                    </div>
+                </div>
+
+                <h2 class="g_tit_deps2">토글 스타일</h2>
+				<!-- toggle -->
+				<div class="tgbox sect_conb4">
+				    <!-- 타이틀 -->
+				    <div class="tit_area">
+				        <strong class="comtit1">아로마 (습식)</strong>
+				        <a href="#" class="btn_tg">
+				            <i class="comico arr_up_mdgr"><img src="../img/common/icon_arr_up_mdgr.png" alt="열기"></i>
+				        </a>
+				    </div>
+				    <!-- //타이틀 -->
+				    <ul class="tg_cont">
+				         <li class="tgitm">
+				             <div class="left">60분</div>
+				             <div class="right">
+				                <strong class="price">40,000<span class="won">원</span></strong>
+				                <del class="del">50,000<span class="won">원</span></del>
+				            </div>
+				         </li>
+				         <li class="tgitm">
+				             <div class="left">90분</div>
+				             <div class="right">
+				                <strong class="price">40,000<span class="won">원</span></strong>
+				                <del class="del">50,000<span class="won">원</span></del>
+				            </div>
+				         </li>
+				         <li class="tgitm">
+				             <div class="left">120분</div>
+				             <div class="right">
+				                <strong class="price">40,000<span class="won">원</span></strong>
+				                <del class="del">50,000<span class="won">원</span></del>
+				            </div>
+				         </li>
+				    </ul>
+				</div>
+				<!-- //toggle -->
+
+				<h2 class="g_tit_deps2">페이징</h2>
+				<div class="pagination">
+                    <a href="#" class="link btn_pg_prev"><i class="comico arr_prev_smgr"><img src="../img/common/icon_arr_prev_smgr.png" alt="이전"></i></a>
+                    <a href="#" class="link on">1</a>
+                    <a href="#" class="link">2</a>
+                    <a href="#" class="link">3</a>
+                    <a href="#" class="link">4</a>
+                    <a href="#" class="link btn_pg_next"><i class="comico arr_next_smgr"><img src="../img/common/icon_arr_prev_smgr.png" alt="다음"></i></a>
+                </div>
+			</div>
+		</div><!--//g_section -->
+
+		<div class="g_section">
+			<h1 class="g_tit_deps1" id="guide6"></h1>
+			<div class="g_wbox">
+				<h2 class="g_tit_deps2">갤러리스타일 1  (.gallerys.sty1)</h2>
+				<div class="gallerys sty1">
+				    <ul class="gallery_list"> 
+				        <li class="itm">
+				            <a href="#" class="itmlink">
+				                <div class="temp_img">
+				                    <img src="../img/main/img_best1.jpg" class="img" alt="수 테라피">
+				                </div>
+				                <div class="infomt">
+				                    <h4 class="gal_tit">수 테라피</h4>
+				                    <ul class="txtlist">
+				                        <li class="titm">인천 서구 청라동</li>
+				                        <li class="titm">영업중</li>
+				                    </ul>
+				                    <strong class="price">110,000 원~</strong>       
+				                    <div class="rating">
+				                        <span class="comico rateylS">평점</span>
+				                        <span class="txtnum">4.9</span>
+				                        <span class="blind">리뷰</span>
+				                        <span class="txtnum rv">(24)</span>
+				                    </div>
+				                    <div class="txt_desc">
+				                        청라동 1인샵 수 테라피 입니다. 20대 젊은 한국 원장님으로 3년 이상의 테라피 경력이 있습니다. 스웨디시 전문으로 오시는 분마다 정성스럽고 달달한 최고의 힐링 스웨디시를 약속드리겠습니..
+				                    </div>
+				                </div>
+				            </a>
+				        </li>
+				    </ul>
+				</div>
+
+				<h2 class="g_tit_deps2">갤러리스타일 2 (.gallerys.sty1)</h2>
+				<div class="ctr_outside">
+                    <div class="gallerys sty1">
+                         <ul class="gallery_list">
+                             <li class="itm">
+                                 <a href="#" class="itmlink">
+                                     <div class="infomt">
+                                        <h4 class="gal_tit">힐링 마사지</h4>
+                                        <ul class="txtlist">
+                                            <li class="titm"><i class="comico lctSgr"><img src="../img/common/icon_lctSgr.png" alt="위치"></i><span class="txt">인천 서구 청라동</span></li>
+                                            <li class="titm">영업중</li>
+                                        </ul>
+                                        <p class="txt_desc lineno">분당 서현역 1인샵 서현 원장 인사드려요. 분당제생병원 인근에 위치해 있습니다. 고객님의 피로와 스트레스를 말끔히 해소해드리는 끝판왕급 감성스웨디시를 선보여드리겠습니다. 섬세하고 정성스러운 관리로 고객님에게 최상의 만족감을 드리겠습니다.</p>    
+                                        <strong class="price">110,000<span class="won">원~</span></strong>   
+                                        <div class="rating">
+                                            <span class="comico rategrSfiv">
+                                                <i class="comico rateylSfiv" style="width:90%">평점</i><!-- 10단위로 %) -->
+                                            </span>
+                                            <span class="txtnum">4.9</span>
+                                            <span class="blind">리뷰</span>
+                                            <span class="txtnum rv">(24)</span>
+                                        </div>
+                                     </div>
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                </div>
+
+				<h2 class="g_tit_deps2">갤러리스타일 3 (.gallerys.sty2)</h2>
+
+				<div class="ctr_outside">
+				    <div class="swiper gallerys sty2">
+				        <ul class="swiper-wrapper gallery_list"> 
+				            <li class="swiper-slide itm">
+				                <a href="gallery_list.html" class="itmlink">
+				                    <div class="temp_img">
+				                        <img src="../img/main/img_loctbest1.jpg" class="img" alt="">
+				                    </div>
+				                    <div class="infomt">
+				                        <h4 class="gal_tit">
+				                            <span class="comico lctMwh"><img src="../img/common/icon_lctMwh.png" alt="위치"></span>
+				                            <span class="txt">서울</span>
+				                        </h4>
+				                        <div class="lct_num">
+				                            <span class="blind">갯수</span>
+				                            <span class="num">823개</span>
+				                        </div>
+				                    </div>
+				                </a>
+				            </li>
+				        </ul>
+				    </div>
+				    <div class="swiper-control">
+				        <div class="swiper-button-prev comico arr_prev_mdgr"><img src="../img/common/icon_arr_prev_mdgr.png" alt="이전" class=""></div>
+				        <div class="swiper-button-next comico arr_next_mdgr"><img src="../img/common/icon_arr_prev_mdgr.png" alt="다음" class=""></div>
+				    </div>
+				</div>
+			</div>
+		</div><!--//g_section -->
+
+		<div class="g_section">
+			<h1 class="g_tit_deps1" id="guide7"></h1>
+			<div class="g_wbox">
+				<h2 class="g_tit_deps2">리스트 스타일 1</h2>
+				<ul class="dotlist sty1">
+                    <li class="titm"><strong>주소</strong> :서울 강서구 마곡동 797-14 발산역 1번출구 도보1분</li>
+                    <li class="titm"><strong>전화번호</strong> :0504 - 1111 - 2222</li>
+                    <li class="titm"><strong>예약</strong> :전화 / 문자</li>
+                    <li class="titm"><strong>영업시간</strong> :11:00 ~ 24:00</li>
+                    <li class="titm"><strong>휴일</strong> :공휴일</li>
+                    <li class="titm"><strong>주차</strong> :건물 내 무료주차</li>
+                </ul>
+                <h2 class="g_tit_deps2">리스트 스타일 2</h2>
+                <ul class="dotlist sty2">
+                    <li class="titm pointCol1"><strong>사전예약</strong> 및 <strong>현금 결제</strong> 시 적용되는 회원가입니다.</li>
+                    <li class="titm pointCol1">예약 시 <strong>천사야 회원</strong>이라고 반드시 말씀해 주셔야 회원가 적용이 가능합니다.</li>
+                    <li class="titm"><strong>건전업소</strong>입니다. 퇴폐 문의 및 요구 시 환불 없이 퇴실 조치합니다.</li>
+                    <li class="titm">궁금하신 사항이나 예약문의 등 전화주시면 상세하게 설명해 드리겠습니다.</li>
+                </ul>
+                <h2 class="g_tit_deps2">텍스트 리스트 1</h2>
+                <ul class="txtlist">
+                    <li class="titm">인천 서구 청라동</li>
+                    <li class="titm">영업중</li>
+                </ul>
+			</div>
+		</div><!--//g_section -->
+
+		<div class="g_section">
+			<h1 class="g_tit_deps1" id="guide5"></h1>
+			<div class="g_wbox">
+				<!-- 타이틀 -->
+				<div class="tit_area">
+				    <h3 class="comtit1">타이틀1 (.tit_area > .comtit1)</h3>
+				    <a href="#" class="btncom btn_alltxt">
+				        <span class="txt">전체보기</span><i class="comico arr_r_smgr"><img src="../img/common/icon_arr_r_smgr.png" alt="이동"></i>
+				    </a>
+				</div>
+				<!-- //타이틀 -->
+				<div class="sect_conb1" style="background-color:#b9cbe0">margin-bottom : PC 72 / M 32 (.sect_conb1)</div>
+				<!-- 타이틀 -->
+				<div class="tit_area">
+				    <h3 class="comtit2">타이틀2 (.tit_area > .comtit2)</h3>
+				    <a href="#" class="btncom btn_alltxt">
+				        <span class="txt">전체보기</span><i class="comico arr_r_smgr"><img src="../img/common/icon_arr_r_smgr.png" alt="이동"></i>
+				    </a>
+				</div>
+				<!-- //타이틀 -->
+				<div class="sect_conb2" style="background-color:#b9cbe0">margin-bottom : PC 62 / M 32 (.sect_conb2)</div>
+				<div class="sect_conb3" style="background-color:#b9cbe0">margin-bottom : PC 48 / M 26 (.sect_conb3)</div>
+				<div class="sect_conb4" style="background-color:#b9cbe0">margin-bottom : PC 48 / M 18 (.sect_conb4)</div>
+				<div class="sect_conb5" style="background-color:#b9cbe0">margin-bottom : PC 25 / M 16 (.sect_conb5)</div>
+			</div>
+		</div><!--//g_section -->
+
+		
+	</div>
+</body>
+</html>

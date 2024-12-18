@@ -1,0 +1,113 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* 요소(element) 여백 초기화 */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, a,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    font-family:'Noto Sans KR', 'Roboto', '맑은 고딕','dotum','Times New Roma','serif','sans-serif';
+    font-weight:500;
+    line-height:1.5;
+    box-sizing:border-box;
+    font-size:100%;
+}
+body {
+    min-width:1440px;
+    background-color:#f6f6f6;
+}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+/* 폼요쇼 */
+input, select, textarea{box-sizing:border-box;width:100%;font-size:14px;border: 1px solid #F2F2F2;vertical-align:middle;transition:all 0.3s;margin:0;}
+input[type="text"], input[type="password"], input[type="number"]{width:100%;padding:0 20px;height:64px;line-height:64px;border: 1px solid #F2F2F2;border-radius:20px;font-size:16px;background-color:#F8F8F8;color:#828282;box-sizing:border-box;}
+input[disabled], select[disabled], textarea[disabled]{background-color:#e5e5e5 !important;}
+select{padding:4px 20px;}
+textarea{height:auto;padding:8px;}
+input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus,select:focus,textarea:focus{background-color:#fafafa;}
+input[type="checkbox"]{appearance:none;border: 1px solid #F2F2F2;border-radius: 5px;width:26px;height:26px;background:no-repeat 50% 50%;background-size:18px auto}
+input[type="checkbox"]:checked{background-image:url(../img/common/icon_checkbox.png);}
+
+/* IE10 이상을 위한 css */
+input::placeholder {color:#ccc;opacity:1;/* 파이어폭스에서 뿌옇게 나오는 현상을 방지하기 위한 css */}
+input::-webkit-input-placeholder {color:#ccc;}
+/* IE */
+input:-ms-input-placeholder {color:#ccc;}
+/* Firefox */
+input:-mos-input-placeholder {color:#ccc;}
+
+/* 제목요소 */
+h1,h2,h3,h4,h5,h6 {font-size:inherit;font-weight:inherit;}
+
+/* 테두리 없애기 */
+fieldset,img,abbr,acronym {border:0 none;}
+img{vertical-align:top;max-width:100%;width:100%;}
+
+/* 목록 */
+ol,ul {list-style:none;margin:0;padding:0;}
+table {border-collapse:separate;border-spacing:0;border:0 none;}
+caption,th,td {text-align:left;font-weight:normal;}
+
+/* 텍스트 관련 요소 초기화 */
+address,caption,em,cite,i {font-weight:normal;font-style:normal;}
+strong{font-weight:600;}
+ins {text-decoration:none;}
+del {text-decoration:line-through;}
+
+/* 인용문 */
+blockquote:before,blockquote:after,q:before,q:after {content:"";}
+blockquote,q {quotes:"" "";}
+
+/* 수평선*/
+hr {display:none;}
+blockquote {margin:0 0 1rem;}
+
+/* 하이퍼링크*/
+button:focus, a:focus{outline:1px dotted #666;}
+button {border:0 none;background-color:transparent;cursor:pointer}
+a {text-decoration:none;color:inherit;transition:color 0.3s, background 0.3s, border 0.3s;box-sizing:border-box;}
+a:hover {text-decoration:none;}
+
+table {width:100%;border-collapse:collapse;}
+caption, .blind {position:absolute;clip:rect(0 0 0 0);width:1px;height:1px;margin:-1px;overflow:hidden;}
+
+.mt0{margin-top:0 !important;}
+
+.wid5{width:5% !important}
+.wid10{width:10% !important}
+.wid15{width:15% !important}
+.wid20{width:20% !important}
+.wid25{width:25% !important}
+.wid30{width:30% !important}
+.wid35{width:35% !important}
+.wid40{width:40% !important}
+.wid45{width:45% !important}
+.wid50{width:50% !important}
+.wid55{width:55% !important}
+.wid60{width:60% !important}
+.wid65{width:65% !important}
+.wid70{width:70% !important}
+.wid75{width:75% !important}
+.wid80{width:80% !important}
+.wid85{width:85% !important}
+.wid90{width:90% !important}
+.wid95{width:95% !important}
+.wid100{width:100% !important}
+
+@media (max-width:820px) {
+    body{min-width:320px;}
+}

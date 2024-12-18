@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1, user-scalable=yes,initial-scale=1.0" />
+    <title>천사야</title>
+    <link rel="stylesheet" href="../css/plugin/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../css/content.css">
+    <script src="../js/plugin/jquery-3.4.1.min.js"></script>
+    <script src="../js/plugin/swiper.min.js"></script>
+    <script src="../js/commonUI.js"></script>
+    <script src="../js/content.js"></script>
+</head>
+	<script>
+
+		$(document).ready(function(){
+			$('.g_top_menu li').each(function(index){
+				console.log(index)
+				var tit = $(this).text()
+				$('.g_tit_deps1').eq(index).text(tit);
+			})
+		})
+	</script>
+	<style type="text/css">
+	 		.g_body{background:#ddd;}
+			.g_wrap{margin:45px auto 0;}
+			.g_menu{position:fixed;left:0;top:0;width:100%;background:#F51B4E;text-align:center;z-index:2}
+			.g_top_menu > li{display:inline-block;}
+			.g_top_menu > li > a, .g_menu > a{min-width:30px;display:block;padding:8px 10px;background:#ff6c8e;margin:0 -1px;color:#fff;}
+			.g_top_menu > li.mlist > a{min-width:62px;background:#b31339;}
+			.g_section{padding-top:10px;}
+			.g_wbox{background:#fff;box-shadow:1px 3px 10px rgba(0,0,0,0.2);}
+			.g_tit_deps1{display:inline-block;position:relative;padding:8px 15px;background:#fff;font-size:19px;color:#0440b3;line-height:1.1;}
+			.g_tit_deps2{padding:25px 0 6px;margin-bottom:15px;border-bottom:1px solid #ddd;font-size:15px;color:#000;}
+			.g_tit_deps3{display:table; margin:18px 0 10px;font-size:13px;color:#6a7b9e;background:#e8e8e8;padding:1px 5px;letter-spacing:0;}
+			.g_tit_deps3:before{content:'＊ ';}
+			hr{border:none;border-bottom:1px dotted #ddd;}
+			
+			.g_table{}
+			.g_table th{height:30px;color:#555;text-align:center;border-top:1px solid #eee;background-color:#fbfbfb;border-bottom:2px solid #0c2b62;font-size:13px;}
+			.g_table td{border-bottom:1px solid #ddd;border-left:1px dashed #e1e1e1;border-left:1px solid #bbb;text-align:left;padding:6px 10px;}
+			.g_table td:first-child{border-left:none;}
+			.g_table .link a{color:#0077e2;}
+			.g_table .link a:hover, .g_table .link a:active{text-decoration:underline;}
+			.g_table .num, .g_table .type, .g_table .name, .g_table .end{text-align:center;} 
+			
+			.g_table .num{padding:0;}
+			.g_table .end{color:red;}
+
+			.g_table tr.red td{background-color:#fff2f2;}
+			.g_table tr.yellow td{background-color:#fdfbec;}
+			.g_table tr.blue td{background-color:#edf1fa;}
+			.g_table tr.gray td{background-color:#f4f4f4;}
+			.g_table tr.green td{background-color:#eefdec;}
+			.g_table tr.orange td{background-color:#f6eee3;}
+			.g_table tr:hover td{background-color:#ccc !important;}
+
+			.g_table tr.line td{height:1px;padding:0;font-size:0;border-color:#aaa;}
+		</style>
+</head>
+
+<body class="g_body">
+	<div class="g_menu">
+		<ul class="g_top_menu">
+			<li class="mlist"><a href="menulist.html">메뉴리스트</a></li>
+			<li><a href="guide.html">가이드</a></li>
+		</ul>
+	</div>
+	<div class="g_wrap">
+		<div class="g_section">
+			<h1 class="g_tit_deps1" id="guide1">메뉴리스트</h1>
+			<div class="g_wbox">
+				<div class="table_wrap"><table class="g_table">
+					<colgroup>
+						<col style="width:12%">
+						<col style="width:12%">
+						<col style="width:50px">
+						<col style="width:auto">
+						<col style="width:60px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col">1depth</th>
+							<th scope="col">2depth</th>
+							<th scope="col">3depth</th>
+							<th scope="col">link</th>
+							<th scope="col">etc</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="red">
+							<td class="dep1">메인</td>
+							<td class="dep2"></td>
+							<td class="dep3"></td>
+							<td class="link"><a href="../html/main.html" target="_blank">main.html</a></td>
+							<td class="etc"></td>
+						</tr>
+						<tr class="green">
+							<td class="dep1">갤러리형</td>
+							<td class="dep2">리스트</td>
+							<td class="dep3"></td>
+							<td class="link"><a href="../html/gallery_list.html" target="_blank">gallery_list.html</a></td>
+							<td class="etc"></td>
+						</tr>
+						<tr class="yellow">
+							<td class="dep1"></td>
+							<td class="dep2">상세</td>
+							<td class="dep3"></td>
+							<td class="link"><a href="../html/gallery_view.html" target="_blank">gallery_view.html</a></td>
+							<td class="etc"></td>
+						</tr>
+						
+						<tr class="blue">
+							<td class="dep1">제휴문의</td>
+							<td class="dep2"></td>
+							<td class="dep3"></td>
+							<td class="link"><a href="../html/partner_list.html" target="_blank">partner_list.html</a></td>
+							<td class="etc"></td>
+						</tr>
+						<tr class="green">
+							<td class="dep1">회원가입</td>
+							<td class="dep2"></td>
+							<td class="dep3"></td>
+							<td class="link"><a href="../html/signup_form.html" target="_blank">signup_form.html</a></td>
+							<td class="etc"></td>
+						</tr>
+					</tbody>
+				</table></div>
+			</div>
+		</div><!--//g_section -->
+	</div>
+</body>
+</html>
